@@ -1,4 +1,4 @@
-package com.liverpool.GestionPedidosLiverpool;
+package com.liverpool.orders;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

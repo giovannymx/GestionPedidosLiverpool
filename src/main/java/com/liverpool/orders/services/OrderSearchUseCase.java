@@ -1,4 +1,4 @@
-package com.liverpool.orders.application.usecase;
+package com.liverpool.orders.services;
 
 import com.liverpool.orders.domain.util.TextSearchUtil;
 import com.liverpool.orders.infrastructure.adapter.in.rest.dto.OrderSearchResponseDto;

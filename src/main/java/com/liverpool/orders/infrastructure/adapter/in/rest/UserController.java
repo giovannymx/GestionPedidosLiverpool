@@ -1,7 +1,7 @@
 package com.liverpool.orders.infrastructure.adapter.in.rest;
 
 
-import com.liverpool.orders.application.usecase.UserService;
+import com.liverpool.orders.services.UserService;
 import com.liverpool.orders.domain.model.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

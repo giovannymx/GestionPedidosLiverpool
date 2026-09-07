@@ -1,4 +1,4 @@
-package com.liverpool.orders.application.usecase;
+package com.liverpool.orders.services;
 
 import com.liverpool.orders.domain.model.OrderEmbedded;
 import com.liverpool.orders.domain.model.User;

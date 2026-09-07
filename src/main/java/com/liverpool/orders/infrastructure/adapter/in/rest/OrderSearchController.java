@@ -1,6 +1,6 @@
 package com.liverpool.orders.infrastructure.adapter.in.rest;
 
-import com.liverpool.orders.application.usecase.OrderSearchUseCase;
+import com.liverpool.orders.services.OrderSearchUseCase;
 import com.liverpool.orders.infrastructure.adapter.in.rest.dto.OrderSearchResponseDto;
 
 import java.util.List;

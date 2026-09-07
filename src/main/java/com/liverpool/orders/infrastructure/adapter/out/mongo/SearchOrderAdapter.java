@@ -1,6 +1,5 @@
 package com.liverpool.orders.infrastructure.adapter.out.mongo;
 
-import com.liverpool.orders.domain.model.Order;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;

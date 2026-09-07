@@ -1,4 +1,4 @@
-package com.liverpool.orders.infrastructure.adapter.out.mongo;
+package com.liverpool.orders.domain.model;
 
 import org.springframework.data.mongodb.core.mapping.Field;
 

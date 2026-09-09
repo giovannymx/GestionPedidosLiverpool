@@ -3,8 +3,8 @@ package com.liverpool.orders.services;
 import com.liverpool.orders.domain.model.OrderEmbedded;
 import com.liverpool.orders.domain.model.User;
 import com.liverpool.orders.domain.port.UserRepositoryPort;
-import com.liverpool.orders.infrastructure.adapter.out.mockapi.MockApiClient;
-import com.liverpool.orders.infrastructure.adapter.out.mockapi.dto.OrderResponseDto;
+import com.liverpool.orders.infrastructure.adapter.out.mockapi.ExternalApiClient;
+import com.liverpool.orders.infrastructure.adapter.out.mockapi.dto.OrderMockDto;
 
 import java.util.Collections;
 import java.util.List;
@@ -15,11 +15,11 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UserRepositoryPort userRepository;
-    private final MockApiClient mockApiClient;
+    private final ExternalApiClient externalApiClient;
 
-    public UserService(UserRepositoryPort userRepository, MockApiClient mockApiClient) {
+    public UserService(UserRepositoryPort userRepository, ExternalApiClient externalApiClient) {
         this.userRepository = userRepository;
-        this.mockApiClient = mockApiClient;
+        this.externalApiClient = externalApiClient;
     }
 
     public User createUser(User user) {
@@ -56,7 +56,7 @@ public class UserService {
     private List<OrderEmbedded> fetchOrdersForUser(String userId) {
         if (userId == null || userId.isBlank()) return Collections.emptyList();
         try {
-            List<OrderResponseDto> pedidos = mockApiClient.fetchPedidos();
+            List<OrderMockDto> pedidos = externalApiClient.fetchPedidos();
             return pedidos.stream()
                     .filter(p -> userId.equals(p.getUserId()))
                     .map(p -> new OrderEmbedded(p.getOrderRef()))

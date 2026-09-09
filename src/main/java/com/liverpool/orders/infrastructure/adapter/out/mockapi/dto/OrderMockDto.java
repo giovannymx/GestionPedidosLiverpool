@@ -4,12 +4,21 @@ import java.util.List;
 
 public class OrderMockDto {
     private String orderRef;
+    private String userId;
     private String orderStatus;
     private String storeName;
     private List<String> items;
 
     public String getOrderRef() { return orderRef; }
     public void setOrderRef(String orderRef) { this.orderRef = orderRef; }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
     public String getOrderStatus() { return orderStatus; }
     public void setOrderStatus(String orderStatus) { this.orderStatus = orderStatus; }
     public String getStoreName() { return storeName; }
